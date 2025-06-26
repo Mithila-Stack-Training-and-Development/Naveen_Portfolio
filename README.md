@@ -1,7 +1,7 @@
 # My Portfolio Website
 
 This is my personal portfolio website built using **HTML**, **CSS**, and **JavaScript**.  
-It showcases my skills, projects, and achievements as an aspiring Full Stack Developer.
+
 
 ## 🌟 Features
 - Simple, clean, and responsive design
