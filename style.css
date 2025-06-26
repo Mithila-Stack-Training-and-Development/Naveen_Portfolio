@@ -1,0 +1,266 @@
+/* ========== RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* ========== HEADER & NAV ========== */
+header {
+    background-color: #007acc;
+    color: #fff;
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    background-color: #e6f2ff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero .btn:hover {
+    background-color: #005f99;
+}
+
+/* ========== SECTIONS ========== */
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-content p {
+    max-width: 600px;
+    font-size: 1.1rem;
+}
+
+/* ========== SKILLS ========== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    text-align: center;
+}
+
+.skill {
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ========== PROJECTS ========== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ========== CONTACT FORM ========== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+section p a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+section p a:hover {
+    text-decoration: underline;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #007acc;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* ========== RESPONSIVE NAV ========== */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #1f1f1f;
+}
+
+.dark-mode .skill {
+    background-color: #333;
+}
+
+.dark-mode .project-card {
+    background-color: #222;
+    border-color: #444;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+}
+
+/* Scroll reveal animation */
+section, .project-card, .skill {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skill bars */
+.skill-bar {
+    background-color: #ccc;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.skill-fill {
+    background-color: #007acc;
+    height: 100%;
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Dark mode tweaks */
+.dark-mode .skill-fill {
+    background-color: #4db8ff;
+}
+
